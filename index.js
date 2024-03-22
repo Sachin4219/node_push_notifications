@@ -30,7 +30,11 @@ app.post("/subscribe", (req, res) => {
   // Pass object into sendNotification
   webpush
     .sendNotification(subscription, payload)
-    .catch((err) => console.error(err));
+    .then(() => res.json({ message: "success" }))
+    .catch((err) => {
+      console.error(err);
+      res.json({ message: "failure" });
+    });
 });
 
 const port = 5000;
