@@ -5,7 +5,8 @@ if ("serviceWorker" in navigator) {
 const publickey =
   "BKRns56lTgiccLbI4tVnvoBrzAeKhbDcZzVSR1Kexd2yVZS3mal9_lPL6Ec8nsYL64acQHgsZbyuC5WZsiTZDic";
 
-const base_url = "http://localhost:5000/subscribe";
+// const base_url = "http://localhost:5000/subscribe";
+const base_url = "https://node-push-notifications.onrender.com/subscribe";
 
 // Register SW, Register Push, Send Push
 async function send() {
